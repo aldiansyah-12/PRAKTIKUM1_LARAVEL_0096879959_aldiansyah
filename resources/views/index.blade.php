@@ -192,7 +192,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Ganti baris contoh di bawah ini dengan @foreach dari database -->
+                    @foreach ($Kunjungan as $K)
+                        
+                    
                     <tr>
                         <td>1</td>
                         <td><strong>Rina Safitri</strong></td>
@@ -202,12 +204,13 @@
                         <td><span class="badge badge-menunggu">Menunggu</span></td>
                         <td>
                             <form action="/kunjungan/hapus/1" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data kunjungan ini?')">
-                                <!-- Jangan lupa tambahkan @csrf -->
+                                 @csrf
                                 <button type="submit" class="btn-delete">Hapus</button>
                             </form>
                         </td>
                     </tr>
                 </tbody>
+                @endforeach
             </table>
         </div>
     </div>

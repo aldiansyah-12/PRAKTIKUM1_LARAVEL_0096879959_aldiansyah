@@ -119,6 +119,9 @@
 
         <!-- Arahkan action ke route /kunjungan/simpan dan jangan lupa @csrf -->
         <form action="/kunjungan/simpan" method="POST">
+            @csrf
+
+            @foreach 
             <div class="form-group">
                 <label>Nama Lengkap Pasien</label>
                 <input type="text" name="nama_pasien" class="form-control" placeholder="Contoh: Andi Wijaya">
